@@ -3,6 +3,7 @@
 #include <set>
 #include <string>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ int Tasks::addNumbers(int number1, int number2)
 
 int Tasks::countWords(string phrase)
 {
+    string res = phrase;
     cout << "### Count words task is running" << endl;
     return 0;
 }
@@ -33,7 +35,7 @@ string Tasks::reverseString(string reverseThis)
 
 string Tasks::toUpperCase(string text)
 {
-    for (int i = 0; i < text.size(); i++)
+    for (auto i = 0u; i < text.size(); i++)
     {
         text.at(i) = toupper(static_cast<unsigned char>(text.at(i)));
     }
@@ -66,12 +68,6 @@ int Tasks::sumVectorElems(vector<int> nums)
     return sumOfElems;
 }
 
-std::vector<int> Tasks::joinVectors(std::vector<int> vec1, std::vector<int> vec2)
-{
-    vector<int> res;
-    return res;
-}
-
 int Tasks::findMax(vector<int> elems)
 {
     int max = 0;
@@ -87,7 +83,14 @@ int Tasks::findMax(vector<int> elems)
     return max;
 }
 
-bool Tasks::isPrime(int num)
+void Tasks::readFile()
 {
-    return false;
+    string firstLine = " ";
+
+    ifstream ReadFile(inputPath);
+    getline(ReadFile, firstLine);
+
+    cout << firstLine << endl;
+
+    ReadFile.close();
 }

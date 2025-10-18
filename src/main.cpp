@@ -7,9 +7,9 @@ using namespace std;
 
 int main()
 {
-
     cout << "Task runner!" << endl;
+
+    Tasks task;
 
     return 0;
 }
-
