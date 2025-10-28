@@ -16,6 +16,7 @@ endif()
 add_executable(MultithreadLab
     src/main.cpp
     src/tasks.cpp
+    src/thread_manager.cpp
 )
 
 # Include headers
